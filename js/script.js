@@ -1,17 +1,19 @@
 // script.js
 /* eslint-disable no-console */
 
-var a = prompt('Enter triangle base:');
-while ( !(a > 0) ) {
-    a = prompt('Only positive number is valid value ' +
-        'Please enter a valid value:');
+function checkValue (value) {
+    while ( !(value > 0) ) {
+        value = prompt('Only positive number is valid value. ' +
+            'Please enter a valid value:');
+    }
+    return value;
 }
 
+var a = prompt('Enter triangle base:');
+a = checkValue(value);
+
 var h = prompt('Enter triangle height');
-while ( (h <= 0) || (isNaN(h) == true) ) {
-    h = prompt('Only positive number is valid value ' +
-        'Please enter a valid value:');
-}
+h = checkValue(value);
 
 var triangleArea = a * h / 2;
 
