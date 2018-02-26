@@ -10,10 +10,10 @@ function checkValue (value) {
 }
 
 var a = prompt('Enter triangle base:');
-a = checkValue(value);
+a = checkValue(a);
 
 var h = prompt('Enter triangle height');
-h = checkValue(value);
+h = checkValue(h);
 
 var triangleArea = a * h / 2;
 
